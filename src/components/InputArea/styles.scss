@@ -1,0 +1,60 @@
+.input-area {
+  position: relative;
+  padding: 1.5625em 0 0;
+
+  > span {
+    position: absolute;
+    bottom: 0.0625rem;
+    right: 0.625rem;
+    background-color: white;
+    font-size: 0.625em;
+    line-height: 2.5rem;
+    color: red;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &.error {
+    input {
+      border-color: red;
+    }
+
+    label {
+      color: red;
+    }
+  }
+  textarea {
+    width: 100%;
+    background: white;
+    display: block;
+    padding: 0.625em 1.25em;
+    border-radius: 4px;
+    color: black;
+    border: 1px solid gray;
+    line-height: 1.25;
+    font-size: 1em;
+
+    height: 11.25em;
+    resize: none;
+
+    &::placeholder {
+      color: gray;
+    }
+  }
+
+  label {
+    display: block;
+    padding: 0.6875em 1.25em;
+    line-height: 1.25;
+    font-size: 1em;
+    width: 100%;
+    cursor: text;
+    color: gray;
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  input:focus ~ span {
+    opacity: 0;
+  }
+}

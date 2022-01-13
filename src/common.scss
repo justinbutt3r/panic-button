@@ -1,0 +1,45 @@
+// width
+$duo-width: calc((100% - 1.5em) / 2);
+
+// breakpoints
+$medium: 768;
+
+@mixin bp($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+// button
+.button {
+  width: 100%;
+  height: 2.5em;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.3125em 2em;
+  line-height: 1.875;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  color: white;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-align: center;
+  transform: perspective(1px) translateZ(0);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:disabled {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    &:disabled {
+      transform: scale(1);
+      cursor: default;
+    }
+  }
+}

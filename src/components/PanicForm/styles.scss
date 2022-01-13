@@ -1,0 +1,26 @@
+@import "../../common.scss";
+.panic-form {
+  width: 100%;
+  max-width: 50em;
+  margin: auto;
+  padding: 1rem;
+
+  &-buttons {
+    margin-top: 2.875em;
+    .button {
+      width: 100%;
+      margin-bottom: 1.25em;
+    }
+    @include bp($medium) {
+      display: flex;
+      justify-content: space-between;
+      .button {
+        margin-bottom: 0;
+        width: $duo-width;
+        &:not(:last-of-type) {
+          margin-right: 1.25em;
+        }
+      }
+    }
+  }
+}
